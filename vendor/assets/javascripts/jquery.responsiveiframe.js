@@ -1,7 +1,6 @@
 /*! jQuery ResponsiveIframe - v0.0.3 - 2013-09-05
  * https://github.com/npr/responsiveiframe
  * Copyright (c) 2013 Irakli Nadareishvili; Licensed MIT, GPL */
-define(['responsiveIframe', 'jquery'], function(ri, jQuery) {
   if (typeof jQuery !== 'undefined') {
     (function( $ ){
       console.log('jquery defined!', $.fn.jquery);
@@ -103,6 +102,7 @@ define(['responsiveIframe', 'jquery'], function(ri, jQuery) {
           $.error( 'Method ' +  method + ' does not exist on jQuery.responsiveIframe' );
         }
       };
+      console.log($.fn.responsiveIframe);
     }( jQuery ));
   }
 
@@ -142,4 +142,3 @@ define(['responsiveIframe', 'jquery'], function(ri, jQuery) {
       module.exports.responsiveIframe = responsiveIframe;
     }
   }());
-});
