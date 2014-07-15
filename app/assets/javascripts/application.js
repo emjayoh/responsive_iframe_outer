@@ -10,5 +10,6 @@
 // Read Sprockets README (https://github.com/sstephenson/sprockets#sprockets-directives) for details
 // about supported directives.
 //
-//= require embed_v0
-//= require app_v0
+//= require jquery-1.9.0
+//= require embed
+//= require app
