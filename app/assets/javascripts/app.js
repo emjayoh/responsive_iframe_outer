@@ -16,19 +16,12 @@ require.config({
     }
   }
 });
-//define(['responsiveIframe'], function(jQuery) {
-//  jQuery('#responsive-frame').responsiveIframe({xdomain: '*'});
+//define(['responsiveIframe'], function($) {
+//  $('#responsive-frame').responsiveIframe({xdomain: '*'});
 //});
-
-
+//
 require(['responsiveIframe'], function($) {
-  console.log('jQuery: ', jQuery.fn.jquery);
-  console.log('$: ', $.fn.jquery);
-  console.log($.fn.responsiveIframe);
-  console.log(jQuery.fn.responsiveIframe);
-  $('#responsive-frame').responsiveIframe({
-    xdomain: '*'
-  });
+  $('#responsive-frame').responsiveIframe({xdomain: '*'});
 });
 
 //
