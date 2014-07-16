@@ -20,7 +20,8 @@ require.config({
 //  $('#responsive-frame').responsiveIframe({xdomain: '*'});
 //});
 //
-require(['responsiveIframe'], function($) {
+require(['jquery', 'responsiveIframe'], function($) {
+  console.log($.fn.jquery);
   $('#responsive-frame').responsiveIframe({xdomain: '*'});
 });
 

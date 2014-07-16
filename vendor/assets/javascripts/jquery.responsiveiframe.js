@@ -140,3 +140,8 @@
       module.exports.responsiveIframe = responsiveIframe;
     }
   }());
+
+
+//define(['responsiveIframe'], function($) {
+//  $('#responsive-frame').responsiveIframe({xdomain: '*'});
+//});
