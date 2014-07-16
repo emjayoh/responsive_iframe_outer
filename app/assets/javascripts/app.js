@@ -1,8 +1,8 @@
+
 require.config({
   baseUrl: 'http://localhost:4000/assets',
   paths: {
     jquery: 'jquery-1.11.1.min',
-//    'jquery-lc': 'jquery-lc',
     responsiveIframe: 'jquery.responsiveiframe'
   },
   map: {
@@ -10,13 +10,20 @@ require.config({
     'jquery-lc': {'jquery': 'jquery'}
   },
   shim: {
-    responsiveIframe: {
-      deps: ['jquery']
+    'responsiveIframe': {
+      deps: ['jquery'],
+      exports: '$'
     }
   }
 });
+//define(['responsiveIframe'], function(jQuery) {
+//  jQuery('#responsive-frame').responsiveIframe({xdomain: '*'});
+//});
 
-require(['jquery', 'responsiveIframe'], function($) {
+
+require(['responsiveIframe'], function($) {
+  console.log('jQuery: ', jQuery.fn.jquery);
+  console.log('$: ', $.fn.jquery);
   console.log($.fn.responsiveIframe);
   console.log(jQuery.fn.responsiveIframe);
   $('#responsive-frame').responsiveIframe({

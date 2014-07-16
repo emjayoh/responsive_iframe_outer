@@ -3,7 +3,7 @@
  * Copyright (c) 2013 Irakli Nadareishvili; Licensed MIT, GPL */
   if (typeof jQuery !== 'undefined') {
     (function( $ ){
-      console.log('jquery defined!', $.fn.jquery);
+      console.log('jQuery inside responsiveIframe: ', $.fn.jquery);
       var settings = {
         xdomain: '*',
         ie : navigator.userAgent.toLowerCase().indexOf('msie') > -1,
@@ -102,7 +102,6 @@
           $.error( 'Method ' +  method + ' does not exist on jQuery.responsiveIframe' );
         }
       };
-      console.log($.fn.responsiveIframe);
     }( jQuery ));
   }
 
@@ -110,7 +109,6 @@
     var self,
       module,
       ResponsiveIframe = function () {self = this;};
-    console.log('jquery not defined');
     ResponsiveIframe.prototype.allowResponsiveEmbedding = function() {
       if (window.addEventListener) {
         window.addEventListener("load", self.messageParent, false);
