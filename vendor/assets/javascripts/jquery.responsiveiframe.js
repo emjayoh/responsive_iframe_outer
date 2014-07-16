@@ -1,9 +1,12 @@
 /*! jQuery ResponsiveIframe - v0.0.3 - 2013-09-05
  * https://github.com/npr/responsiveiframe
  * Copyright (c) 2013 Irakli Nadareishvili; Licensed MIT, GPL */
+
+// Define here for AMD compatibility
+define(['jquery'], function(jQuery) {
   if (typeof jQuery !== 'undefined') {
     (function( $ ){
-      console.log('jQuery inside responsiveIframe: ', $.fn.jquery);
+      console.log('jquery defined!', $.fn.jquery);
       var settings = {
         xdomain: '*',
         ie : navigator.userAgent.toLowerCase().indexOf('msie') > -1,
@@ -109,6 +112,7 @@
     var self,
       module,
       ResponsiveIframe = function () {self = this;};
+    console.log('jquery not defined');
     ResponsiveIframe.prototype.allowResponsiveEmbedding = function() {
       if (window.addEventListener) {
         window.addEventListener("load", self.messageParent, false);
@@ -140,8 +144,4 @@
       module.exports.responsiveIframe = responsiveIframe;
     }
   }());
-
-
-//define(['responsiveIframe'], function($) {
-//  $('#responsive-frame').responsiveIframe({xdomain: '*'});
-//});
+});

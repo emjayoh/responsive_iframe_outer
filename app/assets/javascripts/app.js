@@ -8,27 +8,29 @@ require.config({
   map: {
     '*': {'jquery': 'jquery-lc'},
     'jquery-lc': {'jquery': 'jquery'}
-  },
-  shim: {
-    'responsiveIframe': {
-      deps: ['jquery'],
-      exports: '$'
-    }
   }
+});
+
+require(['jquery','responsiveIframe'], function($) {
+//  console.log('$: ', $.fn.jquery);
+//  console.log('jQuery', jQuery.fn.jquery);
+  $('#responsive-frame').responsiveIframe({xdomain: '*'});
 });
 //define(['responsiveIframe'], function($) {
 //  $('#responsive-frame').responsiveIframe({xdomain: '*'});
 //});
 //
-require(['jquery', 'responsiveIframe'], function($) {
-  console.log($.fn.jquery);
-  $('#responsive-frame').responsiveIframe({xdomain: '*'});
-});
+//require(['jquery', 'responsiveIframe'], function($) {
+//  console.log('$: ', $.fn.jquery);
+//  console.log('jQuery', jQuery.fn.jquery);
+//  $('#responsive-frame').responsiveIframe({xdomain: '*'});
+//});
 
 //
 //
 //console.log('page: ', $.fn.jquery);
-
+//console.log('page: ', jQuery.fn.jquery);
+//
 //require.onError = function (err) {
 //  /*
 //   err has the same info as the errback callback:
