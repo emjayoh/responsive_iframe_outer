@@ -11,5 +11,3 @@
 // about supported directives.
 //
 //= require jquery-1.9.0
-//= require embed
-//= require app
