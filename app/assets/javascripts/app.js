@@ -12,8 +12,6 @@ require.config({
 });
 
 require(['jquery','responsiveIframe'], function($) {
-//  console.log('$: ', $.fn.jquery);
-//  console.log('jQuery', jQuery.fn.jquery);
   $('#responsive-frame').responsiveIframe({xdomain: '*'});
 });
 //define(['responsiveIframe'], function($) {
